@@ -21,7 +21,24 @@
      <img id="treetrunk-base" src="assets\Bark_Pine_basecolor.jpg">
      <img id="treetrunk-ambient-occlusion" src="assets\Bark_Pine_ambientOcclusion.jpg">
      <img id="treetrunk-normal" src="assets\Bark_Pine_normal.jpg">
+     <img id="sky" src="assets\Texturelabs_Sky_121M.jpg">
+    <a-asset-item
+id="chair"src="assets\chair.glb">
+</a-asset-item>
+<a-asset-item
+id="lamp"src="assets\lamp .glb">
+</a-asset-item>
     </a-assets>
+
+<a-entity gltf-model="#chair"
+position="-1.0 0 -10"
+rotation="0 45 0"
+scale="1 1 1">
+</a-entity>
+<a-entity gltf-model="#lamp"
+position="1.0 0 -10"
+scale="0.25 0.25 0.25">
+</a-entity>
         <a-plane 
         material= "src: #grass-base; 
         repeat: 500 500; 
@@ -36,9 +53,9 @@
           > 
         </a-plane>
          <a-sky
-          color="skyblue" 
-          > 
-        </a-sky>
+                src="#sky"
+            
+            ></a-sky>
         <a-mixin
         id="wallcolor"
         color="lightsteelblue"
